@@ -1,0 +1,60 @@
+$layout-breakpoint-small: 480px;
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active {
+  color: lightgray;
+}
+
+.navigation-items {
+  display: flex;
+  gap: 10px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+@media (max-width: 959px) {
+  mat-toolbar {
+    border-radius: 0px;
+  }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+  .hide-extra-small {
+    display: none !important;
+  }
+}
+
+.toolbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.nav-menu-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.nav-items-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+@media (min-width: $layout-breakpoint-small) {
+  .hide-above-extra-small {
+    display: none;
+  }
+}

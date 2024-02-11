@@ -8,6 +8,8 @@ import { HeaderComponent } from './ui/header/header.component';
   standalone: true,
   imports: [
     CommonModule,
+    RouterOutlet,
+    HeaderComponent
   ],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',
