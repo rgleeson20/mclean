@@ -1,16 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-
 @Component({
-  selector: 'app-home',
+  selector: 'app-about',
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
   ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  templateUrl: './about.component.html',
+  styleUrl: './about.component.scss',
 })
-export class HomeComponent {
-
- }
+export class AboutComponent { }

@@ -1,3 +1,16 @@
 :host {
   display: block;
 }
+
+.showreel {
+  .showreel-vimeo-container {
+    max-width: 1000px;
+    margin: auto;
+  }
+}
+
+.section-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
