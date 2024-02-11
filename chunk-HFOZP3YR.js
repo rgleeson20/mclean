@@ -1,0 +1,2 @@
+import{Gb as m,ab as a,ba as i,bb as r,rb as o,tb as s}from"./chunk-D4GMDDQK.js";var f=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=i({type:e,selectors:[["app-home"]],standalone:!0,features:[s],decls:3,vars:0,template:function(n,p){n&1&&(a(0,"p"),o(1,"home works! 3"),r(),o(2,`,
+`))},dependencies:[m],styles:["[_nghost-%COMP%]{display:block}"],changeDetection:0});let t=e;return t})();export{f as HomeComponent};
