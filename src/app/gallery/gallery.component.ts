@@ -1,59 +1,25 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { LightgalleryModule } from 'lightgallery/angular';
-import lgZoom from 'lightgallery/plugins/zoom';
-import lgThumbnail from 'lightgallery/plugins/thumbnail';
-import { BeforeSlideDetail } from 'lightgallery/lg-events';
+
+import { MediaItem } from '../shared/models/media.model';
+import { MediaService } from '../shared/data-access/media.service';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-gallery',
   standalone: true,
-  imports: [CommonModule, LightgalleryModule],
+  imports: [CommonModule],
   templateUrl: './gallery.component.html',
   styleUrl: './gallery.component.scss',
 })
-export class GalleryComponent {
-  data = [
-    {
-      title: 'Image 1',
-      description: 'Description 1',
-      url: 'https://via.placeholder.com/150',
-    },
-    {
-      title: 'Image 2',
-      description: 'Description 2',
-      url: 'https://via.placeholder.com/150',
-    },
-    {
-      title: 'Image 3',
-      description: 'Description 3',
-      url: 'https://via.placeholder.com/150',
-    },
-    {
-      title: 'Image 4',
-      description: 'Description 4',
-      url: 'https://via.placeholder.com/150',
-    },
-    {
-      title: 'Image 5',
-      description: 'Description 5',
-      url: 'https://via.placeholder.com/150',
-    },
-    {
-      title: 'Image 6',
-      description: 'Description 6',
-      url: 'https://via.placeholder.com/150',
-    },
-  ];
-
-  settings = {
-    zoomFromOrigin: true,
-    thumbnail: false,
-    plugins: [lgZoom, lgThumbnail],
-  };
+export class GalleryComponent implements OnInit {
   
-  onBeforeSlide = (detail: BeforeSlideDetail): void => {
-    const { index, prevIndex } = detail;
-    console.log(index, prevIndex);
-  };
+  galleryItems: MediaItem[] = [];
+
+  constructor(private mediaService: MediaService) {}
+
+  ngOnInit() {
+    this.galleryItems = this.mediaService.listAllGalleryItems();
+  }
+
 }
