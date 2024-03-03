@@ -8,6 +8,19 @@
     justify-content: center;
     grid-gap: 10px;
     grid-template-columns: repeat(4, 1fr); /* Default to 4 columns */
+
+    .gallery-item {
+      display: flex;
+      justify-content: center;
+
+      &:nth-child(4n + 1) {
+        justify-content: end;
+      }
+
+      &:nth-child(4n) {
+        justify-content: start;
+      }
+    }
   }
 
   @media screen and (max-width: 1600px) {

@@ -16,10 +16,18 @@
   </div>
 
   <div class="project-items">
+    <div class="iframe-container" *ngFor="let video of videos">
+        <iframe
+          [src]="safeVideoUrls.get(video.title)"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          class="iframe"
+          [title]="video.title"
+        >
+        </iframe>
+      </div>
     <div class="project-image" *ngFor="let item of images">
       <img [src]="item.src" [alt]="item.alt" />
     </div>
-
-    <div></div>
   </div>
 </div>

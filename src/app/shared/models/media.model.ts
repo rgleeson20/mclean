@@ -11,8 +11,7 @@ export interface Image extends MediaItem {
 }
 
 export interface Video extends MediaItem {
-    src: string;
-    alt: string;
+    title: string;
 }
 
 export enum MediaType {

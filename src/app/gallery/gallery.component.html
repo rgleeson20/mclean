@@ -1,6 +1,6 @@
 <div class="gallery-container">
   <div class="gallery">
-    <div *ngFor="let image of galleryItems">
+    <div class="gallery-item" *ngFor="let image of galleryItems">
       <a [routerLink]="['/project', image.projectId]">
         <img [src]="image.thumbSrc" />
       </a>

@@ -12,6 +12,7 @@ import { ProjectService } from '../shared/data-access/project.service';
 import { MatDivider } from '@angular/material/divider';
 import { MediaService } from '../shared/data-access/media.service';
 import { Image, MediaItem, MediaType, Video } from '../shared/models/media.model';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-project',
@@ -24,17 +25,21 @@ import { Image, MediaItem, MediaType, Video } from '../shared/models/media.model
 export class ProjectComponent implements OnInit, OnDestroy {
   project: Project | undefined = undefined;
 
-  mediaItems: MediaItem[] = [];
-
+  
   images: Image[] = [];
   videos: Video[] = [];
+
+  safeVideoUrls: Map<string, SafeUrl> = new Map();
+
+  private mediaItems: MediaItem[] = [];
 
   private projectSub: Subscription = Subscription.EMPTY;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private projectService: ProjectService,
-    private mediaService: MediaService
+    private mediaService: MediaService,
+    private sanitizer: DomSanitizer
   ) {}
 
   ngOnInit(): void {
@@ -66,5 +71,14 @@ export class ProjectComponent implements OnInit, OnDestroy {
   private separateMediaItemsByType(mediaItems: MediaItem[]): void {
     this.images = mediaItems.filter((mediaItem) => mediaItem.type === MediaType.Image) as Image[];
     this.videos = mediaItems.filter((mediaItem) => mediaItem.type === MediaType.Vimeo) as Video[];
+
+    this.setSafeVideoUrls(this.videos);
+  }
+
+  private setSafeVideoUrls(videos: Video[]): void {
+    videos.forEach((video) => {
+      this.safeVideoUrls.set(video.title, this.sanitizer.bypassSecurityTrustResourceUrl(video.src));
+    });
+
   }
 }
