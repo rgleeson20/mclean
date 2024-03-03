@@ -230,16 +230,16 @@ export class DataStore {
       <Image>{
         projectId: ProjectId.PocketCamera,
         type: MediaType.Image,
-        src: 'assets/img/folding-camera.png',
-        thumbSrc: 'assets/img/thumb/folding-camera-300.png',
+        src: 'assets/img/folding-camera.tif',
+        thumbSrc: 'assets/img/thumb/folding-camera-300.tif',
         alt: 'A camera that folds ',
         includeInGallery: true,
       },
       <Image>{
         projectId: ProjectId.Scorpion,
         type: MediaType.Image,
-        src: 'assets/img/scorpion.png',
-        thumbSrc: 'assets/img/thumb/scorpion-300.png',
+        src: 'assets/img/scorpion.tif',
+        thumbSrc: 'assets/img/thumb/scorpion-300.tif',
         alt: 'Image of an animated, metallic scorpion',
         includeInGallery: true,
       },
@@ -251,14 +251,17 @@ export class DataStore {
       yearWorkedOn: 2018,
       location: ProjectLocation.SaddingtonBaynes,
       title: 'Ice Cave',
-      description: 'A project for a client to create an ice cave in a desert.',
+      paragraph1: `For this project I modelled, textured, lit and rendered the interior 
+      of this ice cave, which was integrated with a backplate done by the retouching team at 
+      Saddington Baynes.`,
+      paragraph2: `To achieve this, I blocked out the cave in Maya and sculpted more detail in zBrush. I then textured the cave using Substance Painter in various styles for the retouch team to have quick flexibility for imagining the final interior.  This was a challenge due to the final image resolution being 16k. It was then lit and rendered using Vray.`
     },
     {
       id: ProjectId.Christmas2020,
       yearWorkedOn: 2020,
       location: ProjectLocation.SaddingtonBaynes,
       title: 'Saddington Baynes Christmas 2020',
-      description:
+      paragraph1:
         'The Christmas card by Saddington Baynes in 2020 was a recap of each month of the events of 2020 from the perspective of a tortoise. ',
     },
     {
@@ -266,7 +269,7 @@ export class DataStore {
       yearWorkedOn: 2020,
       location: ProjectLocation.SaddingtonBaynes,
       title: 'What Now?',
-      description:
+      paragraph1:
         'I modelled and textured the toolbox and its contents, as well as lighting and rendering the final image at 12k resolution. The toolbox was made using Maya, zBrush, and Substance Painter, and was rendered using Vray.',
     },
     {
@@ -274,7 +277,7 @@ export class DataStore {
       yearWorkedOn: 2020,
       location: ProjectLocation.SaddingtonBaynes,
       title: 'Dosist',
-      description:
+      paragraph1:
         'The products for this campaign were modelled from real life reference rather than using CAD data, measuring and modelling to ensure they were accurate. This was done in Maya, and then textured to ensure a realistic, natural paper feel.',
     },
     {
@@ -282,7 +285,7 @@ export class DataStore {
       yearWorkedOn: 2020,
       location: ProjectLocation.SaddingtonBaynes,
       title: 'New Balance',
-      description:
+      paragraph1:
         "This project was done to learn how to use Substance Designer and realise it's potential for creating unique fabric patterns.",
     },
     {
@@ -290,7 +293,7 @@ export class DataStore {
       yearWorkedOn: 2019,
       location: ProjectLocation.SaddingtonBaynes,
       title: 'Reggie the Robot',
-      description:
+      paragraph1:
         'Reggie the Robot was first created as part of a series of images of classic childhood toys living in the real world. Once the character was created, he was then used as the Saddington Baynes mascot and has featured in various RnD pieces since.',
     },
     {
@@ -298,7 +301,7 @@ export class DataStore {
       yearWorkedOn: 2019,
       location: ProjectLocation.SaddingtonBaynes,
       title: 'Estée Lauder - RnD',
-      description:
+      paragraph1:
         'This image was created as part of an RnD project to demonstrate the power of CGI to create product imagery for beauty campaigns. ',
     },
     {
@@ -306,7 +309,7 @@ export class DataStore {
       yearWorkedOn: 2017,
       location: ProjectLocation.SaddingtonBaynes,
       title: 'Honda Accord',
-      description:
+      paragraph1:
         'For the Honda Accord I was lighting and rendering the shots below, as well as adjusting shaders when necessary for a shot. Additionally to this I lit and rendered animations that could be seamlessly linked together in different sequences.',
     },
     {
@@ -314,7 +317,7 @@ export class DataStore {
       yearWorkedOn: 2016,
       location: ProjectLocation.SaddingtonBaynes,
       title: 'ACADIA - Transform the Brain',
-      description:
+      paragraph1:
         "This was an advertisement created to demonstrate the confusing and overwhelming hallucinations caused by Parkinson's Disease, which are subsequently reduced by the drug produced by ACADIA. For this project, I textured various assets such as the snake, bugs and the girl in a vivid and other-worldly manner.",
     },
     {
@@ -322,7 +325,7 @@ export class DataStore {
       yearWorkedOn: 2017,
       location: ProjectLocation.SaddingtonBaynes,
       title: 'Honda C-RV',
-      description:
+      paragraph1:
         'For the C-RV I lit location and studio images, as well as modelling and prepping props required for the shots.',
     },
     {
@@ -330,7 +333,7 @@ export class DataStore {
       yearWorkedOn: 2017,
       location: ProjectLocation.SaddingtonBaynes,
       title: 'Honda C-RV',
-      description:
+      paragraph1:
         'For the C-RV I lit location and studio images, as well as modelling and prepping props required for the shots.',
     },
   ];

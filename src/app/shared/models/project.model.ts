@@ -3,7 +3,9 @@ export interface Project {
   yearWorkedOn: number;
   location: ProjectLocation;
   title: string;
-  description: string;
+  paragraph1: string;
+  paragraph2?: string;
+  paragraph3?: string;
 }
 
 export enum ProjectId {

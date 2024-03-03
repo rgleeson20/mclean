@@ -1,0 +1,25 @@
+<div class="project-container" *ngIf="project">
+  <div class="project-header">
+    <h1>
+      {{ project.title }}
+    </h1>
+    <p>
+      <small>{{ project.yearWorkedOn }} | {{ project.location }}</small>
+    </p>
+  </div>
+
+  <mat-divider></mat-divider>
+  <div class="project-description">
+    <p>{{ project.paragraph1 }}</p>
+    <p *ngIf="project.paragraph2">{{ project.paragraph2 }}</p>
+    <p *ngIf="project.paragraph3">{{ project.paragraph3 }}</p>
+  </div>
+
+  <div class="project-items">
+    <div class="project-image" *ngFor="let item of images">
+      <img [src]="item.src" [alt]="item.alt" />
+    </div>
+
+    <div></div>
+  </div>
+</div>

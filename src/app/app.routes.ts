@@ -16,5 +16,10 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./contact/contact.component').then((m) => m.ContactComponent),
   },
+  {
+    path: 'project/:projectId',
+    loadComponent: () =>
+      import('./project/project.component').then((m) => m.ProjectComponent),
+  },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];

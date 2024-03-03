@@ -3,17 +3,17 @@ import { Injectable } from '@angular/core';
 import { DataStore } from './data.store';
 import { MediaItem } from '../models/media.model';
 
-
-
 @Injectable({
   providedIn: 'root',
 })
 export class MediaService {
-
   constructor() {}
 
   listAllGalleryItems(): MediaItem[] {
     return DataStore.allMedia.filter((media) => media.includeInGallery);
   }
-  
+
+  listMediaItemsForProject(projectId: string): MediaItem[] {
+    return DataStore.allMedia.filter((media) => media.projectId === projectId);
+  }
 }
