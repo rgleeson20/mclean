@@ -1,0 +1,70 @@
+@use "sass:map";
+@use '@angular/material' as mat;
+
+
+@include mat.core();
+
+$dark-primary-text: #455A64;
+
+//Define a custom palette.
+$mclean-palette: (
+  50: #f7e7e9,
+  100: #cf8d89,
+  200: #cf8d89,
+  300: #b9645e,
+  400: #bb463a,
+  500: #ba341e,
+  600: #ad2c1e,
+  700: #9d2419,
+  800: #911d13,
+  900: #831206,
+  A100: #f7e7e9,
+  A200: #cf8d89,
+  A400: #bb463a,
+  A700: #9d2419,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $dark-primary-text,
+    600: $dark-primary-text,
+    700: $dark-primary-text,
+    800: $dark-primary-text,
+    900: $dark-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $dark-primary-text,
+  )
+);
+
+// Define a theme.
+$primary: mat.define-palette($mclean-palette, 300, 600, A700);
+
+$theme: mat.define-light-theme((
+  color: (
+    primary: $primary,
+    accent: mat.define-palette(mat.$blue-grey-palette, 500),
+  )
+));
+
+// Set custom background color
+$custom-background-color: #F6EADB;
+
+$custom-background: map-get($theme, 'background');
+$custom-background: map_merge($custom-background, ('background': $custom-background-color));
+$color-map: map.get($theme, 'color');
+$modified-color-map: map.merge($color-map, ('background': $custom-background));
+$theme: map.merge($theme, ('color': $modified-color-map));
+
+
+// Include all theme styles for the components.
+@include mat.all-component-themes($theme);
+
+
+
+
+
+
