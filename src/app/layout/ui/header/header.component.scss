@@ -1,13 +1,21 @@
+@import '../../../../styles/variables.scss';
+
 $layout-breakpoint-small: 480px;
 
 a {
   text-decoration: none;
-  color: white;
+  color: $header-color;
 }
 
 a:hover,
 a:active {
-  color: lightgray;
+  color: $subheader-color;
+}
+
+.home-link {
+  font-family: 'Glacial Indifference';
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .navigation-items {
@@ -16,8 +24,13 @@ a:active {
   list-style-type: none;
   padding: 0;
   margin: 0;
-}
 
+  a {
+    font-family: 'Glacial Indifference';
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
 
 @media (max-width: 959px) {
   mat-toolbar {

@@ -1,5 +1,23 @@
+@import '../../styles/variables.scss';
+
 :host {
   display: block;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 40px;
+
+  .header {
+    color: $header-color;
+  }
+
+  .subheader {
+    color: $subheader-color;
+  }
 }
 
 .showreel {

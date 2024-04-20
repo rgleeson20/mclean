@@ -1,10 +1,8 @@
 @use "sass:map";
 @use '@angular/material' as mat;
 
-
-@include mat.core();
-
-$dark-primary-text: #455A64;
+@import 'variables';
+@import 'fonts';
 
 //Define a custom palette.
 $mclean-palette: (
@@ -23,48 +21,67 @@ $mclean-palette: (
   A400: #bb463a,
   A700: #9d2419,
   contrast: (
-    50: $dark-primary-text,
-    100: $dark-primary-text,
-    200: $dark-primary-text,
-    300: $dark-primary-text,
-    400: $dark-primary-text,
-    500: $dark-primary-text,
-    600: $dark-primary-text,
-    700: $dark-primary-text,
-    800: $dark-primary-text,
-    900: $dark-primary-text,
-    A100: $dark-primary-text,
-    A200: $dark-primary-text,
-    A400: $dark-primary-text,
-    A700: $dark-primary-text,
+    50: $primary-text-color,
+    100: $primary-text-color,
+    200: $primary-text-color,
+    300: $primary-text-color,
+    400: $primary-text-color,
+    500: $primary-text-color,
+    600: $primary-text-color,
+    700: $primary-text-color,
+    800: $primary-text-color,
+    900: $primary-text-color,
+    A100: $primary-text-color,
+    A200: $primary-text-color,
+    A400: $primary-text-color,
+    A700: $primary-text-color,
   )
 );
 
-// Define a theme.
+// Define the theme.
 $primary: mat.define-palette($mclean-palette, 300, 600, A700);
 
-$theme: mat.define-light-theme((
+$mclean-theme: mat.define-light-theme((
   color: (
     primary: $primary,
     accent: mat.define-palette(mat.$blue-grey-palette, 500),
+    typography: $typography
   )
 ));
 
 // Set custom background color
-$custom-background-color: #F6EADB;
-
-$custom-background: map-get($theme, 'background');
-$custom-background: map_merge($custom-background, ('background': $custom-background-color));
-$color-map: map.get($theme, 'color');
+$custom-background: map-get($mclean-theme, 'background');
+$custom-background: map_merge($custom-background, ('background': $background-color));
+$color-map: map.get($mclean-theme, 'color');
 $modified-color-map: map.merge($color-map, ('background': $custom-background));
-$theme: map.merge($theme, ('color': $modified-color-map));
+$mclean-theme: map.merge($mclean-theme, ('color': $modified-color-map));
 
+
+
+@function my-mat-light-theme-foreground($color) {
+    @return (
+        base:              $color,
+        divider:           $color,
+        dividers:          $color,
+        disabled:          rgba($color, 0.38),
+        disabled-button:   rgba($color, 0.38),
+        disabled-text:     rgba($color, 0.38),
+        hint-text:         rgba($color, 0.38),
+        secondary-text:    rgba($color, 0.54),
+        icon:              rgba($color, 0.54),
+        icons:             rgba($color, 0.54),
+        text:              rgba($color, 0.87),
+        slider-off:        rgba($color, 0.26),
+        slider-off-active: rgba($color, 0.38),
+        slider-min:        rgba($color, 0.38)
+    );
+};
+
+$white-foreground: my-mat-light-theme-foreground(white);
+$mclean-theme: map-merge($mclean-theme, (foreground: $white-foreground));
+
+@debug $mclean-theme;
 
 // Include all theme styles for the components.
-@include mat.all-component-themes($theme);
-
-
-
-
-
+@include mat.all-component-themes($mclean-theme);
 

@@ -1,5 +1,25 @@
-// @import 'lightgallery/scss/lightgallery-bundle.scss';
+@use '@angular/material' as mat;
+
+@import 'variables';
+@import 'custom-theme.scss';
+
+@include mat.core();
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0; 
+    // font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
 
+.mat-toolbar {
+    --mat-toolbar-container-background-color: transparent;
+}
+
+.mat-sidenav-container {
+    --mat-sidenav-content-text-color: $primary-text-color;
+}
+
+
+h1 {
+    color: $header-color;
+}

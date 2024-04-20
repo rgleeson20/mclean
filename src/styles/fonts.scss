@@ -1,0 +1,66 @@
+@use '@angular/material' as mat;
+
+
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('../assets/font/glacial-indifference/GlacialIndifference-Regular.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('../assets/font/glacial-indifference/GlacialIndifference-Bold.otf') format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('../assets/font/glacial-indifference/GlacialIndifference-Italic.otf') format("opentype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+$hero: mat.define-typography-level(
+  $font-family: Glacial Indifference,
+  $font-weight: bold,
+  $font-size: 112px,
+  $line-height: 112px,
+  $letter-spacing: .2em,
+);
+
+$hero-sub: mat.define-typography-level(
+  $font-family: Glacial Indifference,
+  $font-weight: bold,
+  $font-size: 88px,
+  $line-height: 88px,
+  $letter-spacing: .2em,
+);
+
+$header-1: mat.define-typography-level(
+  $font-family: Glacial Indifference,
+  $font-weight: bold,
+  $font-size: 35px,
+  $line-height: 35px,
+  $letter-spacing: normal,
+);
+
+$header-2: mat.define-typography-level(
+  $font-family: Glacial Indifference,
+  $font-weight: bold,
+  $font-size: 30px,
+  $line-height: 30px,
+  $letter-spacing: normal,
+);
+
+
+$typography: mat.define-typography-config(
+  $font-family: 'Roboto, "Helvetica Neue", sans-serif',
+  $headline-1: $hero,
+  $headline-2: $hero-sub,
+  $headline-5: $header-1,
+  $headline-6: $header-2,
+);
+
+@include mat.typography-hierarchy($typography);
