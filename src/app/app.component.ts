@@ -20,5 +20,5 @@ import { SidenavListComponent } from './layout/ui/sidenav-list/sidenav-list.comp
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'mclean-app';
+  title = 'Megan McLean';
 }
