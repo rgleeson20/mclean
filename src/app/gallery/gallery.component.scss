@@ -1,58 +1,32 @@
-:host {
-  display: block;
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 1400px;
+
+  .gallery-grid {
+    margin: 0 auto;
+  }
+
+  .gallery-item {
+    width: 300px;
+  }
 }
 
-.gallery-container {
-  .gallery {
-    display: grid;
-    justify-content: center;
-    grid-gap: 10px;
-    grid-template-columns: repeat(4, 1fr); /* Default to 4 columns */
-
-    .gallery-item {
-      display: flex;
-      justify-content: center;
-
-      &:nth-child(4n + 1) {
-        justify-content: end;
-      }
-
-      &:nth-child(4n) {
-        justify-content: start;
-      }
-    }
+@media screen and (max-width: 1600px){
+  .gallery-container {
+    width: 1000px;
   }
+}
 
-  @media screen and (max-width: 1600px) {
-    .gallery {
-      grid-template-columns: repeat(
-        3,
-        1fr
-      ); /* Switch to 3 columns on smaller screens */
-    }
+@media screen and (max-width: 800px){
+  .gallery-container {
+    width: 800px;
   }
+}
 
-  @media screen and (max-width: 800px) {
-    .gallery {
-      grid-template-columns: repeat(
-        2,
-        1fr
-      ); /* Switch to 2 columns on smaller screens */
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-    .gallery {
-      grid-template-columns: repeat(
-        1,
-        1fr
-      ); /* Switch to 1 column on smaller screens */
-
-
-      .gallery-item {
-        display: flex;
-        justify-content: center !important;
-      }
-    }
+@media screen and (max-width: 600px){
+  .gallery-container {
+    width: 600px;
   }
 }

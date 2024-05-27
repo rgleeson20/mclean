@@ -1,10 +1,9 @@
 <div class="gallery-container">
-  <div class="gallery">
-    <div class="gallery-item" *ngFor="let image of galleryItems">
-      <a [routerLink]="['/project', image.projectId]">
-        <img [src]="image.thumbSrc" />
+  <ngx-masonry [options]="myOptions" class="gallery-grid">
+    <div ngxMasonryItem class="gallery-item" *ngFor="let item of galleryItems">
+      <a [routerLink]="['/project', item.projectId]">
+        <img [src]="item.thumbSrc" />
       </a>
-      
-    </div>
-  </div>
+   </div>
+  </ngx-masonry>
 </div>
