@@ -1,13 +1,28 @@
-a{
+@import '../../../../styles/variables.scss';
+
+mat-nav-list {
+  display: flex;
+  flex-direction: column;
+
+}
+
+a {
   text-decoration: none;
-  color: white;
+  text-align: center;
+  color: $header-color;
+  padding: 20px 0 20px 6px;
 }
 
-a:hover, a:active{
-  color: lightgray;
+a:hover,
+a:active {
+  color: $subheader-color;
 }
 
-.nav-caption{
+.nav-caption {
   display: inline-block;
+  color: $header-color;
   padding-left: 6px;
+  font-family: "Glacial Indifference";
+  font-size: 18px;
+  font-weight: bold;
 }
