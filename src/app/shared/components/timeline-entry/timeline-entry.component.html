@@ -1,0 +1,10 @@
+<div class="timeline-entry-container">
+  <div class="date-period" [style.width.px]="dateWidth">
+    <span class="uppercase">{{ datePeriodText }}</span>
+  </div>
+  <div class="content">
+    <div class="header">{{ headerText }}</div>
+    <div *ngIf="subheader" class="subheader">{{ subheader }}</div>
+    <p *ngIf="description" class="description">{{ description }}</p>
+  </div>
+</div>

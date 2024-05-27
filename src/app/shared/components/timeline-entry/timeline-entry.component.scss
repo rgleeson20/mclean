@@ -1,0 +1,53 @@
+@import "../../../../styles/variables.scss";
+
+$date-color: #A0A5BB;
+$header-color: $primary-text-color;
+$subheader-color: #A0A5BB;
+$text-color: $primary-text-color;
+
+.timeline-entry-container {
+  display: flex;
+  max-width: 700px;
+
+  .date-period {
+    box-sizing: border-box;
+    padding-right: 10px;
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight: 600;
+    color: $date-color;
+
+    span {
+      text-wrap: nowrap;
+      height: 16px;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    .header {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1rem;
+      color: $header-color;
+    }
+
+    .subheader {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1rem;
+      padding: 4px 0;
+      color: $subheader-color;
+    }
+
+    .description {
+
+    }
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

@@ -1,75 +1,167 @@
-<h1>About Me</h1>
-<p>My name is Megan McLean and I am a 3D Generalist based in London, UK.</p>
-<p>
-  Currently I'm working at Absolute Post as a CG Generalist, working on TV and
-  online advertising campaigns. I have previously worked at Saddington Baynes as
-  a 3D Artist working on creative, product and automotive projects working on a
-  mixture of stills and animations. I studied Visual Effects at the University
-  of Bolton and I graduated with first class honours.
-</p>
+<div class="about-container">
+  <h1>About Me</h1>
+  <section class="section">
+    <div class="bio">
+      <p>My name is Megan McLean and I am a 3D Generalist based in London, UK.</p>
+      <p>
+        Currently I'm working at Absolute Post as a CG Generalist, working on TV
+        and online advertising campaigns. I have previously worked at Saddington
+        Baynes as a 3D Artist working on creative, product and automotive projects
+        working on a mixture of stills and animations. I studied Visual Effects at
+        the University of Bolton and I graduated with first class honours.
+      </p>
+    </div>
+    
+  </section>
+  <section class="section">
+    <h2>Main Skills</h2>
 
-<h2>Main Skills</h2>
-<ul>
-  <li>3D Modelling</li>
-  <li>Texturing</li>
-  <li>Lighting</li>
-  <li>Rendering</li>
-  <li>Compositing</li>
-</ul>
+    <div class="skills-group">
+      <ul>
+        <li>
+          <div class="tag"><span>3D Modelling</span></div>
+        </li>
+        <li>
+          <div class="tag"><span>Texturing</span></div>
+        </li>
+        <li>
+          <div class="tag"><span>Lighting</span></div>
+        </li>
+        <li>
+          <div class="tag"><span>Rendering</span></div>
+        </li>
+        <li>
+          <div class="tag"><span>Compositing</span></div>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-<h2>Software</h2>
+  <section class="section">
+    <h2>Software</h2>
+    <div class="software-groups">
+      <div class="proficiency-group">
+        <div class="group-header">
+          <h3>High</h3>
+        </div>
+        <ul>
+          <li>Maya</li>
+          <li>zBrush</li>
+          <li>Substance Designer</li>
+          <li>Houdini</li>
+          <li>PTGui</li>
+        </ul>
+      </div>
+      <div class="proficiency-group">
+        <div class="group-header">
+          <h3>Mid</h3>
+        </div>
+        <ul>
+          <li>Mari</li>
+          <li>zBrush</li>
+          <li>Substance Designer</li>
+          <li>Houdini (lighting and rendering only)</li>
+          <li>PTGui</li>
+        </ul>
+      </div>
+      <div class="proficiency-group">
+        <div class="group-header">
+          <h3>Additional</h3>
+        </div>
+        <ul>
+          <li>NukeX</li>
+          <li>Speedtree</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <h2>Work</h2>
+    <div class="timeline">
+      <ol class="list">
+        <li>
+          <app-timeline-entry
+            [datePeriodText]="'June 2022 — present'"
+            [headerText]="'CG Generalist · Absolute Post'"
+            [dateWidth]="150"
+          >
+          </app-timeline-entry>
+        </li>
+        <li>
+          <app-timeline-entry
+            [datePeriodText]="'May 2017 — June 2022'"
+            [headerText]="'Mid-level 3D Artist · Saddington Baynes'"
+            [dateWidth]="150"
+          >
+          </app-timeline-entry>
+        </li>
+        <li>
+          <app-timeline-entry
+            [datePeriodText]="'Feb 2015 — April 2017'"
+            [headerText]="'Junior 3D Artist · Saddington Baynes'"
+            [dateWidth]="150"
+          >
+          </app-timeline-entry>
+        </li>
+      </ol>
+    </div>
+  </section>
 
-<h3>High</h3>
-<ul>
-  <li>Maya</li>
-  <li>V-Ray</li>
-  <li>Arnold</li>
-  <li>Substance Painter</li>
-  <li>Adobe Photoshop</li>
-</ul>
+  <section class="section">
+    <h2>Education</h2>
+    <div class="timeline">
+      <ol class="list">
+        <li>
+          <app-timeline-entry
+            [datePeriodText]="'2011 — 2014'"
+            [headerText]="
+              'Special Effects Development BSc · University of Bolton'
+            "
+            [subheader]="'First Class Honours'"
+            [dateWidth]="80"
+          >
+          </app-timeline-entry>
+        </li>
+        <li>
+          <app-timeline-entry
+            [datePeriodText]="'2009 — 2011'"
+            [headerText]="
+              'Special Effects Development BSc · Cheadle and Marple Sixth Forth College'
+            "
+            [subheader]="
+              'A-Level Media Studies and Physics, AS-Level Chemistry, Film Studies and Use of Maths'
+            "
+            [dateWidth]="80" 
+          >
+          </app-timeline-entry>
+        </li>
+      </ol>
+    </div>
+  </section>
 
-<h3>Medium</h3>
-<ul>
-  <li>Mari</li>
-  <li>zBrush</li>
-  <li>Substance Designer</li>
-  <li>Houdini (lighting and rendering only)</li>
-  <li>PTGui</li>
-</ul>
-
-<h3>Additional</h3>
-<ul>
-  <li>NukeX</li>
-  <li>Speedtree</li>
-</ul>
-
-<h2>Work</h2>
-<p>Absolute Post 2022 - Present</p>
-<p>June 2022 - Present</p>
-<p>CG Generalist</p>
-
-<p>Saddington Baynes </p>
-<p>May 2017 - June 2022</p>
-<p>Mid-level 3D Artist</p>
-
-<p>Saddington Baynes </p>
-<p>Feburary 2015 - April 2017</p>
-<p>Junior 3D Artist</p>
-
-<h2>Education</h2>
-<p>University of Bolton 2011 - 2014</p>
-<p>Special Effects Development BSc</p>
-<p>First Class Honours</p>
-
-<p>Cheadle and Marple Sixth Forth College 2009 - 2011</p>
-<p>
-  A-Level Media Studies and Physics, AS-Level Chemistry, Film Studies and Use of
-  Maths
-</p>
-
-<h2>Credits</h2>
-<p>2017</p>
-<p>3D Artist Magazine, Issue 115 - "Wonder Women" feature</p>
-
-<p>2014</p>
-<p>Texture Artist - Monsters: Dark Continent</p>
+  <section class="section">
+    <h2>Credits</h2>
+    <div class="timeline">
+      <ol class="list">
+        <li>
+          <app-timeline-entry
+            [datePeriodText]="'2017'"
+            [headerText]="
+              'Wonder Women feature · 3D Artist Magazine, Issue 115'
+            "
+            [dateWidth]="50"
+          >
+          </app-timeline-entry>
+        </li>
+        <li>
+          <app-timeline-entry
+            [datePeriodText]="'2014'"
+            [headerText]="'Monsters: Dark Continent'"
+            [dateWidth]="50"
+          >
+          </app-timeline-entry>
+        </li>
+      </ol>
+    </div>
+  </section>
+</div>
