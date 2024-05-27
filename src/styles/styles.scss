@@ -23,3 +23,15 @@ body {
 h1 {
     color: $header-color;
 }
+
+h2 {
+    color: $primary-text-color;
+}
+
+p {
+    color: $primary-text-color;
+}
+
+:root {
+    --mat-app-text-color: $primary-text-color;
+}
