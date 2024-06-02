@@ -4,10 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --poll 500",
-    "build": "ng build",
+    "build": "ng build --base-href='https://www.meganmclean.co.uk'",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng deploy --base-href=https://www.meganmclean.co.uk --cname=meganmclean.co.uk"
+    "deploy": "ng deploy --base-href=https://www.meganmclean.co.uk --cname=meganmclean.co.uk  --dir=docs/browser"
   },
   "private": true,
   "dependencies": {
