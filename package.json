@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --poll 500",
-    "build": "ng build --base-href 'https://github.com/rgleeson20/mclean'",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy": "ng deploy --base-href=/mclean/ --dir=docs/browser"
