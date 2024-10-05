@@ -181,14 +181,6 @@ export class DataStore {
       <Image>{
         projectId: ProjectId.HondaSedan,
         type: MediaType.Image,
-        src: 'assets/img/honda-sedan-1.png',
-        thumbSrc: 'assets/img/thumb/honda-sedan-1-300.png',
-        alt: 'Image of a Honda Civic Sedan fo ',
-        includeInGallery: true,
-      },
-      <Image>{
-        projectId: ProjectId.HondaSedan,
-        type: MediaType.Image,
         src: 'assets/img/honda-sedan-12.png',
         thumbSrc: 'assets/img/thumb/honda-sedan-12-300.png',
         alt: 'Image of a Honda Civic Sedan cream seats ',
@@ -236,8 +228,8 @@ export class DataStore {
       },
       <Image>{
         projectId: ProjectId.PocketCamera,
-        type: MediaType.Image,
-        src: 'assets/img/folding-camera.tif',
+        type: MediaType.Vimeo,
+        src: 'https://player.vimeo.com/video/94460122?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write',
         thumbSrc: 'assets/img/thumb/folding-camera-300.tif',
         alt: 'A camera that folds ',
         includeInGallery: true,
@@ -342,6 +334,39 @@ export class DataStore {
       title: 'Honda C-RV',
       paragraph1:
         'For the C-RV I lit location and studio images, as well as modelling and prepping props required for the shots.',
+    },
+    {
+      id: ProjectId.HondaSedan,
+      yearWorkedOn: 2015,
+      location: ProjectLocation.SaddingtonBaynes,
+      title: 'Honda Sedan',
+      paragraph1:
+        'This was my first project doing automotive work, and definitely improved my lighting in a short amount of time, technically and creatively. For these shots I was responsible for lighting and rendering, as well as resolving any shading or product issues that were discovered along the way.',
+    },
+    {
+      id: ProjectId.HondaSensing,
+      yearWorkedOn: 2015,
+      location: ProjectLocation.SaddingtonBaynes,
+      title: 'Honda Sensing',
+      paragraph1:
+        'For this project I was working as an environment artist which included modelling, texturing and laying out assets in various scenes. Additionally, once the animation was completed, I streamlined the scenes for creating stills from five of the shots so cars could be replaced in the scenes.',
+    },
+    {
+      id: ProjectId.AlexiaFarm,
+      yearWorkedOn: 2015,
+      location: ProjectLocation.SaddingtonBaynes,
+      title: 'Alexia: Farm to Flavour',
+      paragraph1:
+        'I was responsible for texturing the potatoes, leaves and for additional rendering.',
+    },
+    {
+      id: ProjectId.PocketCamera,
+      yearWorkedOn: 2014,
+      location: ProjectLocation.University,
+      title: 'Folding Pocket Camera',
+      paragraph1:
+        'This is my final major project, which I have applied all my knowledge I have gained in the past three years at University, as well as what I was researching for my dissertation. My dissertation is focused on composition, global illumination and texturing, as I felt these were aspects that made a shot look good as well as realistic.',
+      paragraph2: "I modelled the camera in Maya, sculpted broad and fine displacement in zBrush and Mari, textured in Mari, and rendered the shot in Vray. Like previous projects, I composited the layers together in Nuke and tweaked any areas I wasn't completely happy with. I rendered the shots using Vray physical camera, as I was comparing the difference between this and the zDepth pass."
     },
     {
       id: ProjectId.Scorpion,
