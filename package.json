@@ -7,7 +7,7 @@
     "build": "ng build --base-href='https://meganmclean.co.uk'",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng deploy --base-href=https://meganmclean.co.uk --cname=meganmclean.co.uk  --dir=docs/browser"
+    "deploy": "ng deploy --base-href=https://meganmclean.co.uk --cname=meganmclean.co.uk  --dir=docs/browser --repo=https://github.com/rgleeson20/mclean.git --name=rgleeson20"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.1.3",
+    "angular-cli-ghpages": "^2.0.1",
     "@angular/cli": "^17.1.3",
     "@angular/compiler-cli": "^17.1.0",
     "@types/jasmine": "~5.1.0",
