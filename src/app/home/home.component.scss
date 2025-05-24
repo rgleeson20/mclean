@@ -28,6 +28,13 @@
   }
 }
 
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  margin-bottom: 40px;
+}
+
 .section-header {
   display: flex;
   flex-direction: row;

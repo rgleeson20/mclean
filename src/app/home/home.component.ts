@@ -12,11 +12,12 @@ import {
   Breakpoints,
   BreakpointState,
 } from '@angular/cdk/layout';
+import { SkillsComponent } from '../shared/components/skills/skills.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, GalleryComponent],
+  imports: [CommonModule, GalleryComponent, SkillsComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
