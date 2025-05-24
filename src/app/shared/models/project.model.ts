@@ -29,7 +29,9 @@ export enum ProjectId {
   CandyCrush = 'candy-crush',
   TheRig = 'the-rig',
   DeutscheTelekom = 'deutsche-telekom',
-  GardaLand = 'garda-land'
+  GardaLand = 'garda-land',
+  Celebrity = 'celebrity',
+  Zegna = 'zegna'
 }
 
 export enum ProjectLocation {
