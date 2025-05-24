@@ -70,7 +70,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
 
   private separateMediaItemsByType(mediaItems: MediaItem[]): void {
     this.images = mediaItems.filter((mediaItem) => mediaItem.type === MediaType.Image) as Image[];
-    this.videos = mediaItems.filter((mediaItem) => mediaItem.type === MediaType.Vimeo) as Video[];
+    this.videos = mediaItems.filter((mediaItem) => mediaItem.type === MediaType.Vimeo || mediaItem.type === MediaType.YouTube) as Video[];
 
     this.setSafeVideoUrls(this.videos);
   }

@@ -3,12 +3,43 @@ import { Project, ProjectId, ProjectLocation } from '../models/project.model';
 
 export class DataStore {
   static allMedia: MediaItem[] = [
+    <Video>{
+      projectId: ProjectId.GardaLand,
+      type: MediaType.YouTube,
+      src: 'https://www.youtube.com/embed/DX6hJCFfLZ0?si=cWVW31izB-ktJyG',
+      thumbSrc: 'assets/img/thumb/garda-land-04-300.jpg',
+      title: 'GardaLand',
+    },
     <Image>{
-      projectId: ProjectId.IceCave,
+      projectId: ProjectId.GardaLand,
       type: MediaType.Image,
-      src: 'assets/img/icecave.png',
-      thumbSrc: 'assets/img/thumb/icecave-300.png',
-      alt: 'Ice cave in the desert',
+      src: 'assets/img/garda-land-01.jpg',
+      thumbSrc: 'assets/img/thumb/garda-land-01-300.jpg',
+      alt: 'Prezzemolo head on',
+      includeInGallery: false,
+    },
+    <Image>{
+      projectId: ProjectId.GardaLand,
+      type: MediaType.Image,
+      src: 'assets/img/garda-land-02.jpg',
+      thumbSrc: 'assets/img/thumb/garda-land-02-300.jpg',
+      alt: 'Prezzemolo meeting girl',
+      includeInGallery: false,
+    },
+    <Image>{
+      projectId: ProjectId.GardaLand,
+      type: MediaType.Image,
+      src: 'assets/img/garda-land-03.jpg',
+      thumbSrc: 'assets/img/thumb/garda-land-03-300.jpg',
+      alt: 'Mirror shot of Prezzemolo and girl',
+      includeInGallery: false,
+    },
+    <Image>{
+      projectId: ProjectId.GardaLand,
+      type: MediaType.Image,
+      src: 'assets/img/garda-land-04.jpg',
+      thumbSrc: 'assets/img/thumb/garda-land-04-300.jpg',
+      alt: 'Prezzemolo and girl treetops',
       includeInGallery: true,
     },
     <Image>{
@@ -245,6 +276,13 @@ export class DataStore {
   ];
 
   static allProjects: Project[] = [
+    {
+      id: ProjectId.GardaLand,
+      yearWorkedOn: 2025,
+      location: ProjectLocation.Absolute,
+      title: 'GardaLand',
+      paragraph1: 'To celebrate the 50th Anniversary of Gardaland, I worked as part of a team to create the Italian icon, Prezzemolo, as a character in the real world. Using Solaris to bring Prezzemolo to life, I worked on shading, layout, lighting and rendering.',
+    },
     {
       id: ProjectId.IceCave,
       yearWorkedOn: 2018,

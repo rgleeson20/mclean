@@ -24,10 +24,16 @@ export enum ProjectId {
   HondaSensing = 'honda-sensing',
   AlexiaFarm = 'alexia-farm',
   PocketCamera = 'pocket-camera',
-  Scorpion = 'scorpion'
+  Scorpion = 'scorpion',
+  Rise = 'rise',
+  CandyCrush = 'candy-crush',
+  TheRig = 'the-rig',
+  DeutscheTelekom = 'deutsche-telekom',
+  GardaLand = 'garda-land'
 }
 
 export enum ProjectLocation {
+  Absolute = 'Absolute Post',
   SaddingtonBaynes = 'Saddington Baynes',
   University = 'University',
 }

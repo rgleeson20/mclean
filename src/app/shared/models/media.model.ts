@@ -17,5 +17,6 @@ export interface Video extends MediaItem {
 export enum MediaType {
     None = 0,
     Image = 1,
-    Vimeo = 2
+    Vimeo = 2,
+    YouTube = 3
 }
