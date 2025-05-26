@@ -266,6 +266,14 @@ export class DataStore {
       includeInGallery: true,
     },
     <Image>{
+      projectId: ProjectId.IceCave,
+      type: MediaType.Image,
+      src: 'assets/img/icecave.png',
+      thumbSrc: 'assets/img/thumb/icecave-300.png',
+      alt: 'Ice cave in the desert',
+      includeInGallery: true,
+    },
+    <Image>{
       projectId: ProjectId.HondaAccord,
       type: MediaType.Image,
       src: 'assets/img/accord-2.png',
